@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.RegisterActivity">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:transitionName="profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/amity_logo"/>
+
+    <TextView
+        android:id="@+id/student_name"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:text="Name: "
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/branch_name"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:text="Branch: "
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/enrollment_no"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:text="Enrollment No.: "
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/dept_name"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:text="Dept Name:"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:hintEnabled="true">
+      <jrizani.jrspinner.JRSpinner
+          android:id="@+id/cbcs_spinner_1"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="CBCS Choice 1"
+          android:textColor="@android:color/black"
+          app:jrs_title="Choose Your Course"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:hintEnabled="true">
+      <jrizani.jrspinner.JRSpinner
+          android:id="@+id/cbcs_spinner_2"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="CBCS Choice 2"
+          android:textColor="@android:color/black"
+          app:jrs_title="Choose Your Course"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:hintEnabled="true">
+      <jrizani.jrspinner.JRSpinner
+          android:id="@+id/cbcs_spinner_3"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="CBCS Choice 3"
+          android:textColor="@android:color/black"
+          app:jrs_title="Choose Your Course"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/submit_btn_bg"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"/>
+
+  </LinearLayout>
+
+</ScrollView>

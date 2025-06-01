@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 33  // Updated to 33 as required
+    defaultConfig {
+        applicationId "com.amityaump.AmityCBCS"
+        minSdkVersion 22
+        targetSdkVersion 33  // Updated to 33 to match compileSdkVersion
+        versionCode 3
+        versionName "3.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"  // Updated to AndroidX test runner
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    namespace 'com.amityaump.AmityCBCS'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'  // Updated ConstraintLayout to AndroidX version
+
+    testImplementation 'junit:junit:4.13.2'  // Updated JUnit version
+
+    androidTestImplementation 'androidx.test:runner:1.5.2'  // Updated to AndroidX Test runner
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'  // Updated Espresso
+
+    implementation 'com.google.android.material:material:1.9.0'  // Replaces design support library
+
+    implementation 'androidx.cardview:cardview:1.0.0'  // Replaces support library CardView
+
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'  // Keep Glide versions consistent
+
+    implementation 'com.github.jrizani:JRSpinner:1.1.2'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.android.volley:volley:1.2.1'
+}
